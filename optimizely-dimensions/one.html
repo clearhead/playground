@@ -20,7 +20,7 @@
     var $ = optimizely.$;
     $('#btn').click(function () {
       window.optimizely = window.optimizely || [];
-      optimizely.push(['setDimensionValue', $
+      optimizely.push(['setDimensionValue',
         $('#key').val(), $('#val').val()
       ]);
     });
