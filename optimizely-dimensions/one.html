@@ -14,7 +14,7 @@
   Value: <input id="val" value="one" />
   <button id="btn">Submit</button>
 
-  <button id="goal" data-value="one">Goal "one"</button>
+  <button id="goal-one">Click Goal "One"</button>
 
   <script>
     var $ = optimizely.$;
@@ -24,11 +24,14 @@
         $('#key').val(), $('#val').val()
       ]);
     });
-    $('#goal').click(function () {
-      window.optimizely = window.optimizely || [];
-      optimizely.push(['trackEvent', $('#goal').data('value')]);
-    });
   </script>
+
+  <ul>
+    <li><h2><a href="index.html" title="index">index</a></h2></li>
+    <li><h2><a href="one.html" title="one">one</a></h2></li>
+    <li><h2><a href="two.html" title="two">two</a></h2></li>
+    <li><h2><a href="three.html" title="three">three</a></h2></li>
+  </ul>
 
 </body>
 </html>
