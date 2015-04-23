@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Two</title>
+  <script src="//cdn.optimizely.com/js/2448130542.js"></script>
+</head>
+<body>
+
+  <h1>Page Two</h1>
+
+  Dimension: <input id="key" value="playground" />
+  Value: <input id="val" value="two" />
+  <button id="btn">Submit</button>
+
+  <button id="goal" data-value="two">Goal "Two"</button>
+
+  <script>
+    var $ = optimizely.$;
+    $('#btn').click(function () {
+      window.optimizely = window.optimizely || [];
+      optimizely.push(['setDimensionValue', $
+        $('#key').val(), $('#val').val()
+      ]);
+    });
+    $('#goal').click(function () {
+      window.optimizely = window.optimizely || [];
+      optimizely.push(['trackEvent', $('#goal').data('value')]);
+    });
+  </script>
+
+</body>
+</html>
