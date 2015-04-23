@@ -1,2 +1,2 @@
 python -m SimpleHTTPServer &
-open http://localhost:8080/
+open http://localhost:8000/
